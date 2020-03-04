@@ -1,7 +1,7 @@
 public class SortOfSort {
     public static void main(String[] args){
         // sorted {6, 5, 2, 1 || 3, 4, 7, 8}
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8}; //unsorted
+        int[] arr = {1, 5, 3, 8, 2, 6, 7, 4}; //unsorted
 
         //Case: Odd Numbered Array
         int[] arr2 = {1, 2, 3, 4, 5};
@@ -20,14 +20,32 @@ public class SortOfSort {
 
         sortArray(arr);
     }
-    public static int[] sortArray(int[] array){
+    public static void sortArray(int[] array){
+
+        printArray(array);
         int max = array[0];
-        for(int i = 0; i < array.length; i++){
-            if(array[i] > max){
-                max = array[i];
+        int count = 0;
+        if(count <= 2){
+            for(int i = 0; i < array.length; i++){
+                if(array[i] > max){
+
+                }
             }
-            array[array.length - 1] = max;
+            count++;
         }
-        return array;
+
+        printArray(array);
+    }
+    public static void printArray(int[] array){
+
+        int count = 0;
+        System.out.print("{ ");
+        while(count < array.length){
+            for(int i = 0; i < array.length; i++){
+                System.out.print(array[i] + ", ");
+                count++;
+            }
+            System.out.println("}");
+        }
     }
 }
